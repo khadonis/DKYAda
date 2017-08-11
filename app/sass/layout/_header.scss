@@ -1,0 +1,14 @@
+header{
+    position: fixed;
+    width: 100%;
+    z-index: $zindex_header;
+}
+.top{
+    background-color: $transparent_header;
+    position: relative;
+    border-bottom: 2px solid #fff;
+    z-index: $zindex_header;
+}
+.logo{
+    margin: 12px auto;
+}

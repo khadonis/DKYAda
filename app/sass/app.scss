@@ -1,0 +1,37 @@
+//vendor
+@import "vendor/font-awesome";
+@import "vendor/bootstrap";
+@import "vendor/swiper.min";
+
+//abstracts (variables, mixins...)
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+@import "abstracts/fonts";
+
+//base
+@import "base/base";
+@import "base/typography";
+@import "base/helpers";
+@import "base/sprite";
+
+//components
+@import "components/nav";
+@import "components/sliders";
+@import "components/buttons";
+@import "components/boxes";
+@import "components/heros";
+@import "components/icons";
+
+//layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/forms";
+
+//pages
+//@import "pages/category";
+//@import "pages/about";
+//@import "pages/contact";
+
+/*! sourceMappingURL=app.css.map */

@@ -1,0 +1,15 @@
+body{
+    font-family: $font-normal;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline-block;
+}
+a{
+    &:hover{
+        text-decoration: none;
+    }
+    color: $gray_darker;
+}

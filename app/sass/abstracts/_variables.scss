@@ -1,0 +1,19 @@
+//fonts
+$font_normal: 'flexoregular';
+$font_bold: 'flexobold';
+$font_thin: 'flexothin';
+$font_size_p: 24px;
+//texts
+$btn_indents: 5px;
+//colors
+$gray_darker: #282828;
+$transparent_header: rgba(0, 0, 0, .2);
+//scales
+$width_left: 100vh;
+$width_video_height: (100vw)/1.777777777777778;
+//coordinates
+$top_sections: -125px;
+//z-indexes
+$zindex_heros:1;
+$zindex_header:2;
+$zindex_left: $zindex_header;

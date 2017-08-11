@@ -1,0 +1,123 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$chat-name: 'chat';
+$chat-x: 150px;
+$chat-y: 39px;
+$chat-offset-x: -150px;
+$chat-offset-y: -39px;
+$chat-width: 33px;
+$chat-height: 33px;
+$chat-total-width: 188px;
+$chat-total-height: 150px;
+$chat-image: '../images/sprite.png';
+$chat: (150px, 39px, -150px, -39px, 33px, 33px, 188px, 150px, '../images/sprite.png', 'chat', );
+$play-icon-name: 'play-icon';
+$play-icon-x: 0px;
+$play-icon-y: 0px;
+$play-icon-offset-x: 0px;
+$play-icon-offset-y: 0px;
+$play-icon-width: 150px;
+$play-icon-height: 150px;
+$play-icon-total-width: 188px;
+$play-icon-total-height: 150px;
+$play-icon-image: '../images/sprite.png';
+$play-icon: (0px, 0px, 0px, 0px, 150px, 150px, 188px, 150px, '../images/sprite.png', 'play-icon', );
+$ucyuzalmis-name: 'ucyuzalmis';
+$ucyuzalmis-x: 150px;
+$ucyuzalmis-y: 0px;
+$ucyuzalmis-offset-x: -150px;
+$ucyuzalmis-offset-y: 0px;
+$ucyuzalmis-width: 38px;
+$ucyuzalmis-height: 39px;
+$ucyuzalmis-total-width: 188px;
+$ucyuzalmis-total-height: 150px;
+$ucyuzalmis-image: '../images/sprite.png';
+$ucyuzalmis: (150px, 0px, -150px, 0px, 38px, 39px, 188px, 150px, '../images/sprite.png', 'ucyuzalmis', );
+$zoom-name: 'zoom';
+$zoom-x: 150px;
+$zoom-y: 72px;
+$zoom-offset-x: -150px;
+$zoom-offset-y: -72px;
+$zoom-width: 20px;
+$zoom-height: 22px;
+$zoom-total-width: 188px;
+$zoom-total-height: 150px;
+$zoom-image: '../images/sprite.png';
+$zoom: (150px, 72px, -150px, -72px, 20px, 22px, 188px, 150px, '../images/sprite.png', 'zoom', );
+$spritesheet-width: 188px;
+$spritesheet-height: 150px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($chat, $play-icon, $ucyuzalmis, $zoom, );
+$spritesheet: (188px, 150px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
