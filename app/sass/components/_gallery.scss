@@ -1,0 +1,10 @@
+.galeri {
+    position: relative;
+    padding-bottom: 200px;
+    background: {
+        image: url('../images/galeri-bg.png');
+        position: 0 0;
+        repeat: no-repeat;
+        size: cover;
+    }
+}

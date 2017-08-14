@@ -1,0 +1,35 @@
+.grid-item,
+.grid-sizer {
+    width: 33.333%;
+}
+
+.grid-item {
+    padding: 5px;
+    float: left;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-item--width2 {
+    width: 50%;
+}
+
+.grid-item--width3 {
+    width: 66.5%;
+}
+
+.grid-item--height2 {
+    height: 495px;
+}
+
+.modal-body {
+    text-align: center;
+}

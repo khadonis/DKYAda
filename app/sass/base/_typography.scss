@@ -1,4 +1,30 @@
-body,p{
+body,
+p {
     font-size: $font_size_p;
     color: $gray_darker;
+}
+
+.side-head {
+    font-family: $font_bold;
+    font-size: 48px;
+    color: $gray_darker;
+    letter-spacing: 12px;
+    text-indent: 12px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -$side-heads;
+    left: 10%;
+    transform: rotate(90deg);
+    transform-origin: 0%;
+    border-bottom: 2px solid $gray_darker;
+    padding:0 60px 5px;
+    &:last-of-type{
+        color: #fff;
+        left: auto;
+        right: -10%;
+        top: auto;
+        bottom: -40px;
+        border-bottom-color: #fff;
+        transform: rotate(270deg);
+    }
 }

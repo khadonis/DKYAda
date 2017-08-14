@@ -8,12 +8,15 @@ $btn_indents: 5px;
 //colors
 $gray_darker: #282828;
 $transparent_header: rgba(0, 0, 0, .2);
+$brand_color: #ea5b0c;
 //scales
 $width_left: 100vh;
 $width_video_height: (100vw)/1.777777777777778;
 //coordinates
 $top_sections: -125px;
+$side-heads: 290px;
 //z-indexes
 $zindex_heros:1;
-$zindex_header:2;
+$zindex_header:3;
 $zindex_left: $zindex_header;
+$zindex_side_heads: 2;
