@@ -1,14 +1,21 @@
-body{
+.ie {
+    overflow-x: hidden;
+}
+
+body {
     font-family: $font-normal;
 }
-ul{
+
+ul {
     list-style: none;
 }
-li{
+
+li {
     display: inline-block;
 }
-a{
-    &:hover{
+
+a {
+    &:hover {
         text-decoration: none;
     }
     color: $gray_darker;

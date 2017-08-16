@@ -13,12 +13,15 @@ p {
     text-transform: uppercase;
     position: absolute;
     top: -$side-heads;
+    .ie & {
+        top: -100px;
+    }
     left: 10%;
     transform: rotate(90deg);
     transform-origin: 0%;
     border-bottom: 2px solid $gray_darker;
     padding:0 60px 5px;
-    &:last-of-type{
+    &:last-of-type {
         color: #fff;
         left: auto;
         right: -10%;
@@ -26,5 +29,65 @@ p {
         bottom: -40px;
         border-bottom-color: #fff;
         transform: rotate(270deg);
+    }
+}
+
+h2 {
+    .huzur & {
+        font-size: 375%;
+        font-family: $font_bold;
+        color: rgb(39, 174, 96);
+        line-height: 1.2;
+        margin-bottom: 40px;
+    }
+}
+
+h3 {
+    .spec & {
+        font-size: 18px;
+        font-family: $font_bold;
+        color: rgb(40, 40, 40);
+        line-height: 1.2;
+        text-align: center;
+    }
+    .huzur & {
+        font-size: 312.5%;
+        font-family: $font_buttercup;
+        color: rgb(16, 137, 239);
+        line-height: 1.2;
+        margin-top: 333px;
+        margin-left: 12%;
+    }
+}
+
+h5 {
+    .ada-spot & {
+        font-size: 60px;
+        font-family: $font_bold;
+        color: rgb(40, 40, 40);
+        line-height: 1.2;
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+}
+
+p {
+    .ada-spot & {
+        font-size: 36px;
+        font-family: $font_normal;
+        color: rgb(40, 40, 40);
+        line-height: 1.667;
+        text-align: center;
+    }
+    .huzur & {
+        font-size: 150%;
+        font-family: $font_normal;
+        color: rgb(22, 22, 22);
+        line-height: 1.5;
+        margin: 0;
+        &:nth-of-type(1) {
+            margin-left: 12%;
+        }
     }
 }

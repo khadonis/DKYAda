@@ -49,6 +49,10 @@
     left: 60px;
     background-color: $transparent_header;
     width: $width_left;
+    .ie & {
+        top: 103vh;
+        width: 110vh;
+    }
     ul,
     li {
         display: block;

@@ -4,6 +4,11 @@
     top: $top_sections;
     height: 100vh;
     position: relative;
+    .ie & {
+        background-color: #fff;
+        top: 62px;
+        z-index: $zindex_left+1;
+    }
     &-text {
         padding-top: 190px;
         padding-left: 60px;
@@ -12,13 +17,17 @@
     }
     &-film {
         position: relative;
-        .film-img{
+        .film-img {
             position: absolute;
             width: 100%;
             height: 100vh;
+            background: {
+                size: cover;
+                repeat: no-repeat;
+                position: center;
+            }
             z-index: $zindex_left;
-            
-            &:after{
+            &:after {
                 content: '';
                 @include all-align(absolute);
                 @extend .play-icon;
@@ -31,15 +40,112 @@
         }
     }
 }
-.lokasyon{
+
+.lokasyon {
     height: 100vh;
     position: relative;
+    padding: 250px 0;
     width: 100%;
     top: $top_sections*2;
+    .ie & {
+        top: -62px;
+    }
     background-image: url('../images/lokasyon-bg.png');
     background: {
-        repeat:no-repeat;
-        position:0 0;
+        repeat: no-repeat;
+        position: 0 0;
         size: cover;
     }
+    .container {
+        @include vertical-align();
+        .ie & {
+            top: 60%;
+        }
+    }
+    /* &-inner {
+        color: #fff;
+    } */
+    .prop,
+    .value {
+        font-size: 18px;
+        font-family: $font_bold;
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        text-align: center;
+    }
+    .value {
+        font-size: 24px;
+    }
+}
+
+.icon {
+    border-radius: 120px;
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    display: block;
+    padding: 20px;
+    margin: 0 auto 30px;
+    position: relative;
+    i {
+        @include all-align(absolute);
+    }
+}
+
+.ada {
+    &-spot {
+        padding: 90px 0;
+    }
+    &-logo {
+        text-align: center;
+    }
+}
+
+.video {
+    position: relative;
+    height: 100vh;
+    z-index: $zindex_header - 1;
+}
+
+.spec {
+    padding: 150px 0 0;
+    position: relative;
+    .side-head {
+        top: -40px;
+    }
+    .col-sm-3 {
+        padding: 60px 15px;
+        border: 1px solid $gray_darker;
+        min-height: 352px;
+        border-top: none;
+        border-right: none;
+        margin: 0; //&:nth-child(4n),
+        &:first-child,
+        &:nth-child(5n) {
+            border-left: none;
+        }
+        &:nth-child(n+5) {
+            border-bottom: none;
+        }
+    }
+    .icon {
+        background-color: #1b1b1b;
+        width: 140px;
+        height: 140px;
+    }
+    .container {
+        margin-bottom: 60px;
+    }
+}
+.huzur{
+    background: {
+        image:url('../images/huzur-bg.png');
+        repeat:no-repeat;
+        position: 0 60px;
+        size: 100%;
+    }
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-size: 66.8%;
 }
