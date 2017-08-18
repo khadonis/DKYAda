@@ -9,6 +9,7 @@ p {
     font-size: 48px;
     color: $gray_darker;
     letter-spacing: 12px;
+    z-index: $zindex_heros;
     text-indent: 12px;
     text-transform: uppercase;
     position: absolute;
@@ -34,11 +35,15 @@ p {
 
 h2 {
     .huzur & {
-        font-size: 375%;
+        font-size: 60px;
         font-family: $font_bold;
         color: rgb(39, 174, 96);
         line-height: 1.2;
         margin-bottom: 40px;
+        @include breakpoint(huges) {
+            margin-left: 10%;
+            font-size: 50px;
+        }
     }
 }
 
@@ -51,12 +56,17 @@ h3 {
         text-align: center;
     }
     .huzur & {
-        font-size: 312.5%;
+        font-size: 50px;
         font-family: $font_buttercup;
         color: rgb(16, 137, 239);
         line-height: 1.2;
         margin-top: 333px;
         margin-left: 12%;
+        @include breakpoint(huges) {
+            margin-top: 200px;
+            margin-left: 35%;
+            font-size: 35px;
+        }            
     }
 }
 
@@ -80,14 +90,22 @@ p {
         line-height: 1.667;
         text-align: center;
     }
+    .huzur .container div:nth-of-type(2) & {
+        margin-left: 12%;
+        @include breakpoint(huges) {
+        margin-left: 25%;
+        }            
+    }
     .huzur & {
-        font-size: 150%;
+        font-size: 24px;
         font-family: $font_normal;
         color: rgb(22, 22, 22);
         line-height: 1.5;
         margin: 0;
-        &:nth-of-type(1) {
-            margin-left: 12%;
+        margin-left: 5%;
+        @include breakpoint(huges) {
+            font-size: 18px;
+            margin-left: 45%;
         }
     }
 }

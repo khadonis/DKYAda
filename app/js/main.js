@@ -18,3 +18,11 @@ $('a.thumb').click(function (event) {
   content.html('<img src="' + src + '">');
   $('.modal-profile').modal('{show:true}');
 });
+$('#myModal').modal('handleUpdate');
+$('#myModal').on('show.bs.modal', function () {
+  $(this).find('.modal-body').css({
+    width: 'auto', //probably not needed
+    height: 'auto', //probably not needed 
+    'max-height': '100%'
+  });
+});

@@ -4,6 +4,9 @@
     top: $top_sections;
     height: 100vh;
     position: relative;
+    @include breakpoint(huges){
+        height: 110vh;
+    }
     .ie & {
         background-color: #fff;
         top: 62px;
@@ -14,6 +17,9 @@
         padding-left: 60px;
         padding-bottom: 185px;
         padding-right: 60px;
+        @include breakpoint(huges) {
+            padding-top: 110px;
+        }
     }
     &-film {
         position: relative;
@@ -21,6 +27,9 @@
             position: absolute;
             width: 100%;
             height: 100vh;
+            @include breakpoint(huges){
+                height: 110vh;
+            }
             background: {
                 size: cover;
                 repeat: no-repeat;
@@ -42,6 +51,7 @@
 }
 
 .lokasyon {
+    z-index: $zindex_side_heads;
     height: 100vh;
     position: relative;
     padding: 250px 0;
