@@ -26,3 +26,47 @@ $('#myModal').on('show.bs.modal', function () {
     'max-height': '100%'
   });
 });
+//linklere tıklanınca sayfanın ilgili bölümlerine gönderme fonksiyonu.
+function sendToTop(aLink) {
+  $(aLink).each(function () {
+    $(this).click(function (e) {
+      e.preventDefault();
+      var $this = $(this);
+      var divId = $this.attr('href');
+      console.log(divId);
+      $('html,body').animate({
+        scrollTop: $('#' + divId).offset().top
+      }, 1500);
+    });
+  });
+};
+sendToTop('.main-menu-item a');
+sendToTop('.btn-bilgi');
+
+
+$('.hamb-menu').click(function () {
+  $('.main-menu').toggleClass('open');
+  $(this).toggleClass('closed');
+  return false;
+});
+$(document).click(function () {
+  $('.main-menu').removeClass('open');
+  $('.hamb-menu').removeClass('closed');
+});
+
+function clickStop(div) {
+  div.click(function (evt) {
+    evt.stopPropagation();
+  });
+};
+clickStop($('.main-menu'));
+
+//filmi oynat
+$('.film-has-video').click(function () {
+  $(this).css('background-image', 'none');
+  $(this).after().hide();
+  /* var $iframe = $(this).siblings('.video-frame');
+  var src = $iframe.attr('src');
+  $iframe.attr('src', src + '&autoplay=1'); */
+  playVideo();
+});

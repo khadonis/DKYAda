@@ -28,6 +28,9 @@
 
 .grid-item--height2 {
     height: 495px;
+    @include breakpoint(mediums){
+        height: 315px;
+    }
 }
 
 .modal-body {

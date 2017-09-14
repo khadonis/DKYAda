@@ -1,4 +1,4 @@
-%btn-befores{
+%btn-befores {
     content: "\f178";
     position: absolute;
     height: 100%;
@@ -17,9 +17,13 @@
     opacity: 0;
     top: 20px;
     -webkit-font-smoothing: antialiased;
-
 }
-%btn-hover-befores{
+
+%btn-hover-befores {
     left: 85%;
     opacity: 1;
+}
+
+%transition {
+    transition: all ease 0.2s;
 }

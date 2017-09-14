@@ -49,6 +49,21 @@
     left: 60px;
     background-color: $transparent_header;
     width: $width_left;
+    
+    @include breakpoint(larges) {
+        transform: rotate(0deg);
+        top: $header_height;
+        left: 0;
+        width: auto;
+        height: $width_left;
+        body & ul {
+            text-align: left;
+            padding: 0;
+        }
+        body & li {
+            display: block;
+        }
+    }
     .ie & {
         top: 103vh;
         width: 110vh;
@@ -73,6 +88,32 @@
         color: #fff;
         @include breakpoint(huges) {
             font-size: 12px;
+        }
+    }
+}
+
+.main-menu {
+    display: block;
+    position: absolute;
+    top: $header_height;
+    left: -200px;
+    @extend %transition;
+    margin: 0;
+    min-width: auto;
+    width: auto; // height: 100%;
+    min-height: 100%;
+    padding: 30px;
+    background-color: rgba(#000, 0.6);
+    &.open {
+        left: 0;
+    }
+    &-item {
+        display: block;
+        a {
+            color: #ffffff;
+            display: block;
+            line-height: 2.5;
+            font-size: $font_size_small;
         }
     }
 }

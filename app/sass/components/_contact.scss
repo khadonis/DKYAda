@@ -1,0 +1,117 @@
+.contact {
+    position: relative;
+    color: #ffffff;
+    font-size: 18px;
+    &-bg {
+        min-height: $top_contact;
+        position: absolute;
+        width: 100%;
+        top: -$top_contact;
+        @include breakpoint(mediums){
+            top: -($top_contact + 100);
+        }
+        background: {
+            image: url('../images/bg-contact.png');
+            repeat: no-repeat;
+            position: top center;
+            size: cover;
+        }
+    }
+    &-in {
+        padding-bottom: 60px;
+        padding-top: ($top_contact + 30);
+        overflow: hidden;
+        margin-bottom: 90px;
+    }
+    &-wr {
+        position: relative;
+    }
+    &-wr-l {
+        padding-right: 100px;
+        @include breakpoint(mediums){
+            padding-right: 30px;
+        }            
+        &:after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 100vh;
+            top: -30px;
+            right: -15px;
+            background-color: #fff;
+            display: block;
+        }
+    }
+    &-wr-r {
+        padding-left: 100px;
+        @include breakpoint(mediums){
+            padding-left: 30px;
+        }            
+    }
+    &-head {
+        font-family: $font_normal;
+        font-size: $font_size_h3;
+        @include breakpoint(mediums){
+            font-size: $font_size_p;
+        }            
+        letter-spacing: 10px;
+        padding-left: 35px;
+        padding-bottom: 30px;
+        &.no-pad,
+        &.no-pad-l {
+            padding-left: 0;
+        }
+    }
+    &-input {
+        color: #ffffff;
+        margin-bottom: 10px;
+        background-color: transparent;
+        padding: 10px 15px;
+        border: 1px solid #fff;
+        font-size: 16px;
+        width: 100%;
+        &::placeholder {
+            color: #ffffff;
+        }
+    }
+    &-select {
+        appearance: none;
+        option {
+            background-color: $gray_darker;
+        }
+    }
+    &-a-head {
+        font-size: $font_size_p;
+        font-family: $font_bold;
+        padding-left: 35px;
+    }
+    &-text {
+        line-height: 1.75;
+        padding-left: 35px;
+        position: relative;
+        margin-bottom: 15px;
+        i {
+            position: absolute;
+            left: 0;
+            top: 7px;
+        }
+        &-link {
+            h3 {
+                float: left;
+                margin-top: -2px;
+                margin-bottom: 0;
+                font-family: $font_bold;
+                font-size: $font_size_p;
+            }
+        }
+    }
+    a {
+        color: #ffffff;
+        display: block;
+        clear: left;
+        float: left;
+    }
+    i {
+        float: left;
+    }
+}

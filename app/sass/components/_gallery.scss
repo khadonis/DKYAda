@@ -1,6 +1,9 @@
 .galeri {
     position: relative;
     padding-bottom: 200px;
+    @include breakpoint(mediums){
+        padding-bottom: 240px;
+    }
     background: {
         image: url('../images/galeri-bg.png');
         position: 0 0;
