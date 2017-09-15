@@ -31,6 +31,9 @@
     @include breakpoint(mediums){
         height: 315px;
     }
+    @include breakpoint(smalls){
+        height: 133px;
+    }  
 }
 
 .modal-body {

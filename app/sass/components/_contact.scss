@@ -7,8 +7,12 @@
         position: absolute;
         width: 100%;
         top: -$top_contact;
-        @include breakpoint(mediums){
+        @include breakpoint(mediums) {
             top: -($top_contact + 100);
+        }
+        @include breakpoint(smalls) {
+            top: -($top_contact + 130);
+            padding-top: ($top_contact + 70);
         }
         background: {
             image: url('../images/bg-contact.png');
@@ -22,15 +26,25 @@
         padding-top: ($top_contact + 30);
         overflow: hidden;
         margin-bottom: 90px;
+        @include breakpoint(smalls) {
+            padding-top: 0;
+            margin-bottom: 0;
+            padding-bottom: 30px;
+        }
     }
     &-wr {
         position: relative;
     }
     &-wr-l {
         padding-right: 100px;
-        @include breakpoint(mediums){
+        @include breakpoint(mediums) {
             padding-right: 30px;
-        }            
+        }
+        @include breakpoint(smalls) {
+            padding-right: 0;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 15px;
+        }
         &:after {
             content: '';
             position: absolute;
@@ -40,20 +54,28 @@
             right: -15px;
             background-color: #fff;
             display: block;
+            @include breakpoint(smalls) {
+                display: none;
+            }
         }
     }
     &-wr-r {
         padding-left: 100px;
-        @include breakpoint(mediums){
+        @include breakpoint(mediums) {
             padding-left: 30px;
-        }            
+        }
     }
     &-head {
         font-family: $font_normal;
         font-size: $font_size_h3;
-        @include breakpoint(mediums){
+        @include breakpoint(mediums) {
             font-size: $font_size_p;
-        }            
+        }
+        @include breakpoint(smalls) {
+            font-size: $font_size_p - 4;
+            text-align: center;
+            padding-left: 0;
+        }
         letter-spacing: 10px;
         padding-left: 35px;
         padding-bottom: 30px;

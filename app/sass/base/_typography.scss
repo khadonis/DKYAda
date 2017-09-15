@@ -28,6 +28,13 @@ p {
             display: inline-block;
         }
     }
+    @include breakpoint(smalls) {
+        position: relative;
+        transform: rotate(0deg);
+        top: -50px;
+        left: 0;
+        display: inline-block;
+    }
     .ie & {
         top: -100px;
     }
@@ -44,6 +51,13 @@ p {
         bottom: -40px;
         border-bottom-color: #fff;
         transform: rotate(270deg);
+        @include breakpoint(smalls) {
+            position: relative;
+            transform: rotate(0deg);
+            top: 10px;
+            left: 0;
+            display: inline-block;
+        }
     }
 }
 
@@ -63,10 +77,12 @@ h2 {
             font-size: 40px;
             margin-bottom: 20px;
         }
-        @include breakpoint(mediums){
+        @include breakpoint(mediums) {
             margin-bottom: 0;
         }
-            
+        @include breakpoint(smalls) {
+            margin-left: 0;
+        }
     }
 }
 
@@ -96,11 +112,14 @@ h3 {
             font-size: 30px;
             line-height: 1.7;
         }
-        @include breakpoint(mediums){
+        @include breakpoint(mediums) {
             margin-top: 15px;
             margin-left: 26%;
             width: 100%;
             margin-bottom: 0;
+        }
+        @include breakpoint(smalls) {
+            margin-left: 0;
         }
     }
 }
@@ -114,8 +133,12 @@ h5 {
         text-align: center;
         margin-top: 80px;
         margin-bottom: 30px;
-        @include breakpoint(mediums){
+        @include breakpoint(mediums) {
             font-size: 40px;
+        }
+        @include breakpoint(smalls) {
+            margin-top: 30px;
+            font-size: 30px;
         }
     }
 }
@@ -127,9 +150,12 @@ p {
         color: rgb(40, 40, 40);
         line-height: 1.667;
         text-align: center;
-        @include breakpoint(mediums){
+        @include breakpoint(mediums) {
             font-size: 24px;
         }
+        @include breakpoint(smalls) {
+            font-size: 18px;
+        }            
     }
     .huzur .container div:nth-of-type(2) & {
         margin-left: 12%;
@@ -140,10 +166,13 @@ p {
             margin-left: 38%;
             font-size: 16px;
         }
-        @include breakpoint(mediums){
+        @include breakpoint(mediums) {
             margin-top: 15px;
             margin-left: 6%;
             width: 100%;
+        }
+        @include breakpoint(smalls) {
+            margin-left: 0;
         }
     }
     .huzur & {
@@ -157,15 +186,18 @@ p {
             font-size: 18px;
             margin-left: 45%;
         }
-        @include breakpoint(larges){
+        @include breakpoint(larges) {
             font-size: 16px;
             margin-left: 51%;
             width: 64%;
         }
-        @include breakpoint(mediums){
+        @include breakpoint(mediums) {
             margin-top: 15px;
             margin-left: 46%;
             width: 100%;
+        }
+        @include breakpoint(smalls) {
+            margin-left: 0;
         }
     }
 }

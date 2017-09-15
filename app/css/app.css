@@ -4077,6 +4077,14 @@ p {
         top: -50px;
         left: 0;
         display: inline-block; } }
+  @media (max-width: 425px) {
+    .side-head {
+      position: relative;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      top: -50px;
+      left: 0;
+      display: inline-block; } }
   .ie .side-head {
     top: -100px; }
   .side-head:last-of-type {
@@ -4088,6 +4096,14 @@ p {
     border-bottom-color: #fff;
     -webkit-transform: rotate(270deg);
             transform: rotate(270deg); }
+    @media (max-width: 425px) {
+      .side-head:last-of-type {
+        position: relative;
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        top: 10px;
+        left: 0;
+        display: inline-block; } }
 
 .huzur h2 {
   font-size: 60px;
@@ -4107,6 +4123,9 @@ p {
   @media (max-width: 768px) {
     .huzur h2 {
       margin-bottom: 0; } }
+  @media (max-width: 425px) {
+    .huzur h2 {
+      margin-left: 0; } }
 
 .spec h3 {
   font-size: 18px;
@@ -4139,6 +4158,9 @@ p {
       margin-left: 26%;
       width: 100%;
       margin-bottom: 0; } }
+  @media (max-width: 425px) {
+    .huzur h3 {
+      margin-left: 0; } }
 
 .ada-spot h5 {
   font-size: 60px;
@@ -4151,6 +4173,10 @@ p {
   @media (max-width: 768px) {
     .ada-spot h5 {
       font-size: 40px; } }
+  @media (max-width: 425px) {
+    .ada-spot h5 {
+      margin-top: 30px;
+      font-size: 30px; } }
 
 .ada-spot p {
   font-size: 36px;
@@ -4161,6 +4187,9 @@ p {
   @media (max-width: 768px) {
     .ada-spot p {
       font-size: 24px; } }
+  @media (max-width: 425px) {
+    .ada-spot p {
+      font-size: 18px; } }
 
 .huzur .container div:nth-of-type(2) p {
   margin-left: 12%; }
@@ -4176,6 +4205,9 @@ p {
       margin-top: 15px;
       margin-left: 6%;
       width: 100%; } }
+  @media (max-width: 425px) {
+    .huzur .container div:nth-of-type(2) p {
+      margin-left: 0; } }
 
 .huzur p {
   font-size: 24px;
@@ -4198,6 +4230,9 @@ p {
       margin-top: 15px;
       margin-left: 46%;
       width: 100%; } }
+  @media (max-width: 425px) {
+    .huzur p {
+      margin-left: 0; } }
 
 .text-left {
   text-align: left; }
@@ -4213,9 +4248,15 @@ p {
 
 .no-pad-l {
   padding-left: 0; }
+  @media (max-width: 425px) {
+    .no-pad-l {
+      padding-left: 15px; } }
 
 .no-pad-r {
   padding-right: 0; }
+  @media (max-width: 425px) {
+    .no-pad-r {
+      padding-right: 15px; } }
 
 .support-menu {
   position: absolute;
@@ -4278,6 +4319,9 @@ p {
         padding: 0; }
       body .left li {
         display: block; } }
+    @media (max-width: 1024px) and (max-width: 425px) {
+      body .left li {
+        display: inline; } }
   .ie .left {
     top: 103vh;
     width: 110vh; }
@@ -4299,6 +4343,9 @@ p {
     @media (max-width: 1366px) {
       .left a {
         font-size: 12px; } }
+    @media (max-width: 425px) {
+      .left a {
+        padding: 0 5px; } }
 
 .main-menu {
   display: block;
@@ -4421,6 +4468,11 @@ p {
   @media (max-width: 768px) {
     .info {
       height: 70vh; } }
+  @media (max-width: 425px) {
+    .info {
+      height: 120vh;
+      -webkit-clip-path: none;
+              clip-path: none; } }
   .ie .info {
     background-color: #fff;
     top: 62px;
@@ -4433,6 +4485,11 @@ p {
     @media (max-width: 1366px) {
       .info-text {
         padding-top: 110px; } }
+    @media (max-width: 425px) {
+      .info-text {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 50px; } }
   .info-film {
     position: relative; }
     .info-film .film-img {
@@ -4483,6 +4540,10 @@ p {
   @media (max-width: 768px) {
     .lokasyon {
       height: 70vh; } }
+  @media (max-width: 425px) {
+    .lokasyon {
+      top: 0;
+      height: 210vh; } }
   .ie .lokasyon {
     top: -62px; }
   .lokasyon .container {
@@ -4492,6 +4553,9 @@ p {
     position: relative; }
     .ie .lokasyon .container {
       top: 60%; }
+    @media (max-width: 425px) {
+      .lokasyon .container {
+        margin-top: 50px; } }
   .lokasyon .prop,
   .lokasyon .value {
     font-size: 18px;
@@ -4508,6 +4572,9 @@ p {
     @media (max-width: 768px) {
       .lokasyon .value {
         font-size: 16px; } }
+    @media (max-width: 425px) {
+      .lokasyon .value {
+        margin-bottom: 15px; } }
 
 .icon {
   border-radius: 120px;
@@ -4524,6 +4591,11 @@ p {
       min-height: 100%;
       height: auto;
       padding: 45px; } }
+  @media (max-width: 425px) {
+    .icon {
+      margin-bottom: 15px;
+      width: 0;
+      padding: 55px; } }
   .icon i {
     left: 50%;
     top: 50%;
@@ -4533,6 +4605,9 @@ p {
 
 .ada-spot {
   padding: 90px 0; }
+  @media (max-width: 425px) {
+    .ada-spot {
+      padding: 130px 0 50px; } }
 
 .ada-logo {
   text-align: center; }
@@ -4548,6 +4623,9 @@ p {
 .spec {
   padding: 150px 0 0;
   position: relative; }
+  @media (max-width: 768px) {
+    .spec {
+      padding: 100px 0 0; } }
   .spec .side-head {
     top: -40px; }
   .spec .col-sm-3 {
@@ -4562,12 +4640,24 @@ p {
       border-left: none; }
     .spec .col-sm-3:nth-child(n+5) {
       border-bottom: none; }
+      @media (max-width: 425px) {
+        .spec .col-sm-3:nth-child(n+5) {
+          border-bottom: 1px solid #282828; } }
+    @media (max-width: 425px) {
+      .spec .col-sm-3 {
+        padding: 0;
+        margin-bottom: 30px;
+        min-height: 225px;
+        border-left: none; } }
   .spec .icon {
     background-color: #1b1b1b;
     width: 140px;
     height: 140px; }
   .spec .container {
     margin-bottom: 60px; }
+    @media (max-width: 425px) {
+      .spec .container {
+        margin-bottom: 0; } }
 
 .huzur {
   background-image: url("../images/huzur-bg.png");
@@ -4583,6 +4673,9 @@ p {
       background-position: 520px top;
       background-size: 125%;
       height: 36vh; } }
+  @media (max-width: 425px) {
+    body .huzur {
+      height: 100vh; } }
   @media (max-width: 1024px) {
     .huzur {
       height: 75vh; } }
@@ -4607,139 +4700,139 @@ p {
 
 .chat {
   background-image: url(../images/sprite.png);
-  background-position: -298px -91px;
+  background-position: -310px -91px;
   width: 33px;
   height: 33px; }
 
 .icon-air {
   background-image: url(../images/sprite.png);
-  background-position: -85px -237px;
+  background-position: -85px -249px;
   width: 92px;
   height: 34px; }
 
 .icon-avm {
   background-image: url(../images/sprite.png);
-  background-position: -333px -191px;
+  background-position: -345px -191px;
   width: 66px;
   height: 54px; }
 
 .icon-bahce {
   background-image: url(../images/sprite.png);
-  background-position: 0px -150px;
+  background-position: 0px -162px;
   width: 87px;
   height: 87px; }
 
 .icon-deniz {
   background-image: url(../images/sprite.png);
-  background-position: -150px 0px;
+  background-position: -162px 0px;
   width: 96px;
   height: 82px; }
 
 .icon-direction {
   background-image: url(../images/sprite.png);
-  background-position: -298px -124px;
+  background-position: -310px -124px;
   width: 23px;
   height: 23px; }
 
 .icon-fitnes {
   background-image: url(../images/sprite.png);
-  background-position: -87px -150px;
+  background-position: -162px -82px;
   width: 71px;
   height: 74px; }
 
 .icon-hospital {
   background-image: url(../images/sprite.png);
-  background-position: -333px -133px;
+  background-position: -345px -133px;
   width: 62px;
   height: 58px; }
 
 .icon-mail {
   background-image: url(../images/sprite.png);
-  background-position: -371px -269px;
+  background-position: -383px -269px;
   width: 19px;
   height: 15px; }
 
 .icon-marine {
   background-image: url(../images/sprite.png);
-  background-position: -333px -67px;
+  background-position: -345px -67px;
   width: 65px;
   height: 66px; }
 
 .icon-park {
   background-image: url(../images/sprite.png);
-  background-position: -158px -150px;
+  background-position: -87px -162px;
   width: 72px;
   height: 72px; }
 
 .icon-phone {
   background-image: url(../images/sprite.png);
-  background-position: -371px -245px;
+  background-position: -383px -245px;
   width: 24px;
   height: 24px; }
 
 .icon-pin {
   background-image: url(../images/sprite.png);
-  background-position: -317px -152px;
+  background-position: -329px -152px;
   width: 16px;
   height: 25px; }
 
 .icon-restoran {
   background-image: url(../images/sprite.png);
-  background-position: -246px 0px;
+  background-position: -258px 0px;
   width: 87px;
   height: 58px; }
 
 .icon-sosyal {
   background-image: url(../images/sprite.png);
-  background-position: -246px -152px;
+  background-position: -258px -152px;
   width: 71px;
   height: 68px; }
 
 .icon-spa {
   background-image: url(../images/sprite.png);
-  background-position: -246px -58px;
+  background-position: -258px -58px;
   width: 52px;
   height: 94px; }
 
 .icon-submit {
   background-image: url(../images/sprite.png);
-  background-position: -298px -58px;
+  background-position: -310px -58px;
   width: 33px;
   height: 33px; }
 
 .icon-train {
   background-image: url(../images/sprite.png);
-  background-position: -150px -82px;
+  background-position: -159px -162px;
   width: 79px;
   height: 65px; }
 
 .icon-way {
   background-image: url(../images/sprite.png);
-  background-position: -333px 0px;
+  background-position: -345px 0px;
   width: 66px;
   height: 67px; }
 
 .icon-yuzme {
   background-image: url(../images/sprite.png);
-  background-position: 0px -237px;
+  background-position: 0px -249px;
   width: 85px;
   height: 55px; }
 
 .play-icon, .info-film .film-img.film-has-video:after {
   background-image: url(../images/sprite.png);
   background-position: 0px 0px;
-  width: 150px;
-  height: 150px; }
+  width: 162px;
+  height: 162px; }
 
 .ucyuzalmis {
   background-image: url(../images/sprite.png);
-  background-position: -333px -245px;
+  background-position: -345px -245px;
   width: 38px;
   height: 39px; }
 
 .zoom {
   background-image: url(../images/sprite.png);
-  background-position: -177px -237px;
+  background-position: -258px -220px;
   width: 20px;
   height: 22px; }
 
@@ -4756,9 +4849,18 @@ i {
   @media (max-width: 768px) {
     .galeri {
       padding-bottom: 240px; } }
+  @media (max-width: 425px) {
+    .galeri {
+      top: 90px;
+      padding-bottom: 40px; } }
+
+@media (max-width: 425px) {
+  body .modal {
+    width: 90% !important; } }
 
 body .modal.in .modal-dialog,
-body .modal.fade .modal-dialog, body .modal .modal-dialog {
+body .modal.fade .modal-dialog,
+body .modal .modal-dialog {
   display: inline-block;
   width: auto !important;
   left: 50%;
@@ -4766,11 +4868,13 @@ body .modal.fade .modal-dialog, body .modal .modal-dialog {
           transform: translateX(-50%);
   max-height: 78vh; }
   body .modal.in .modal-dialog img,
-  body .modal.fade .modal-dialog img, body .modal .modal-dialog img {
+  body .modal.fade .modal-dialog img,
+  body .modal .modal-dialog img {
     max-width: 100%;
     max-height: 78vh; }
   body .modal.in .modal-dialog .modal-body,
-  body .modal.fade .modal-dialog .modal-body, body .modal .modal-dialog .modal-body {
+  body .modal.fade .modal-dialog .modal-body,
+  body .modal .modal-dialog .modal-body {
     position: relative;
     overflow-y: auto;
     padding: 15px; }
@@ -4780,6 +4884,9 @@ body .modal.fade .modal-dialog, body .modal .modal-dialog {
   margin-bottom: 80px;
   width: 100%;
   margin-top: 120px; }
+  @media (max-width: 425px) {
+    .map {
+      margin-bottom: 0; } }
 
 .contact {
   position: relative;
@@ -4797,11 +4904,20 @@ body .modal.fade .modal-dialog, body .modal .modal-dialog {
     @media (max-width: 768px) {
       .contact-bg {
         top: -388px; } }
+    @media (max-width: 425px) {
+      .contact-bg {
+        top: -418px;
+        padding-top: 358px; } }
   .contact-in {
     padding-bottom: 60px;
     padding-top: 318px;
     overflow: hidden;
     margin-bottom: 90px; }
+    @media (max-width: 425px) {
+      .contact-in {
+        padding-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 30px; } }
   .contact-wr {
     position: relative; }
   .contact-wr-l {
@@ -4809,6 +4925,11 @@ body .modal.fade .modal-dialog, body .modal .modal-dialog {
     @media (max-width: 768px) {
       .contact-wr-l {
         padding-right: 30px; } }
+    @media (max-width: 425px) {
+      .contact-wr-l {
+        padding-right: 0;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 15px; } }
     .contact-wr-l:after {
       content: '';
       position: absolute;
@@ -4818,6 +4939,9 @@ body .modal.fade .modal-dialog, body .modal .modal-dialog {
       right: -15px;
       background-color: #fff;
       display: block; }
+      @media (max-width: 425px) {
+        .contact-wr-l:after {
+          display: none; } }
   .contact-wr-r {
     padding-left: 100px; }
     @media (max-width: 768px) {
@@ -4832,6 +4956,11 @@ body .modal.fade .modal-dialog, body .modal .modal-dialog {
     @media (max-width: 768px) {
       .contact-head {
         font-size: 24px; } }
+    @media (max-width: 425px) {
+      .contact-head {
+        font-size: 20px;
+        text-align: center;
+        padding-left: 0; } }
     .contact-head.no-pad, .contact-head.no-pad-l {
       padding-left: 0; }
   .contact-input {
@@ -4922,6 +5051,9 @@ header {
   @media (max-width: 768px) {
     .grid-item--height2 {
       height: 315px; } }
+  @media (max-width: 425px) {
+    .grid-item--height2 {
+      height: 133px; } }
 
 .modal-body {
   text-align: center; }
