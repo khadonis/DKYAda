@@ -2,6 +2,11 @@
     clip-path: polygon(100% 0%, 100% 86%, 63% 100%, 0 86%, 0 0);
     position: relative;
     top: 0;
+    @include breakpoint(smalls) {
+        body & {
+            top: 92px;
+        }
+    }
     z-index: $zindex_heros;
     left: 0;
     &,
@@ -9,6 +14,9 @@
         height: (100vw)/2.168;
         width: 100%;
         top: 0;
+        background-size: cover;
+        background-image: url('../images/hero-shoot.jpg');
+        background-color: transparent;
     }
     .hero-video {
         position: absolute;

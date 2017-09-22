@@ -1,14 +1,30 @@
-header{
+header {
     position: fixed;
     width: 100%;
     z-index: $zindex_header;
 }
-.top{
+
+.top {
     background-color: $transparent_header;
     position: relative;
     border-bottom: 2px solid #fff;
     z-index: $zindex_header;
 }
-.logo{
+
+.logo {
     margin: 12px auto;
+}
+
+.tel-number {
+    width: 100%;
+    text-align: right;
+    a {
+        width: 100%;
+        color: #fff;
+        right: 30px;
+        @include breakpoint(smalls) {
+            right: 15px;
+            font-size: 12px;
+        }
+    }
 }

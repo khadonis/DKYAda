@@ -10,14 +10,14 @@ $(document).ready(function () {
   });
 });
 //bootstrap modal popup convert to lightbox
-$('a.thumb').click(function (event) {
+/* $('a.thumb').click(function (event) {
   event.preventDefault();
   var src = $(this).attr('href');
   var content = $('.modal-body');
   content.empty();
   content.html('<img src="' + src + '">');
   $('.modal-profile').modal('{show:true}');
-});
+}); */
 $('#myModal').modal('handleUpdate');
 $('#myModal').on('show.bs.modal', function () {
   $(this).find('.modal-body').css({
@@ -69,4 +69,14 @@ $('.film-has-video').click(function () {
   var src = $iframe.attr('src');
   $iframe.attr('src', src + '&autoplay=1'); */
   playVideo();
+});
+
+$("a.plans-link, a.thumb").fancybox({
+  'speedIn': 600,
+  'speedOut': 200,
+  'padding': 0,
+  'margin': 20,
+  "cyclic":true,
+  "overlayColor": '#000',
+  "overlayOpacity": '0.9'
 });

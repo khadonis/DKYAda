@@ -31,12 +31,14 @@ gulp.task('cleanCSS', function () {
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(cleanCSS())
 		.pipe(rename('app.min.css'))
-		.pipe(sourcemaps.write('/'))
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('dist/css'));
 });
 
+
+
 gulp.task('manage', function () {
-	return gulp.src(['app/js/jquery-1.12.4.min.js', 'app/js/swiper.jquery.min.js', 'app/js/*.js'])
+	return gulp.src(['app/js/jquery-1.12.4.min.js', 'app/js/jquery-migrate-1.4.1.min.js', 'app/js/*.js'])
 		.pipe(cache(uglify({ output: { comments: /^!/ } })))
 		.pipe(concat('app.js'))
 		.pipe(rename('app.min.js'))
@@ -68,12 +70,6 @@ gulp.task('sprite', function () {
 	spriteData.img.pipe(gulp.dest('dist/images'));
 	spriteData.css.pipe(gulp.dest('app/sass/base/'));
 });
-
-
-
-
-
-
 
 gulp.task('import', function () {
 	gulp.src('app/*.html')

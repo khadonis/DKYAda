@@ -2,6 +2,8 @@
 @import "vendor/font-awesome";
 @import "vendor/bootstrap";
 @import "vendor/swiper.min";
+@import "vendor/jquery.fancybox-1.3.4";
+@import "vendor/sweetalert2-min";
 
 //abstracts (variables, mixins...)
 @import "abstracts/variables";
@@ -13,18 +15,19 @@
 @import "base/base";
 @import "base/typography";
 @import "base/helpers";
-@import "base/sprite";
+@import "base/sprite"; 
 
 //components
 @import "components/nav";
 @import "components/sliders";
 @import "components/buttons";
-@import "components/boxes";
+@import "components/boxes"; 
 @import "components/heros";
 @import "components/icons";
 @import "components/gallery";
 @import "components/map";
 @import "components/contact";
+@import "components/plans";
 
 //layout
 @import "layout/header";
