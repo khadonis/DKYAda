@@ -6,6 +6,10 @@
         min-height: $top_contact;
         position: absolute;
         width: 100%;
+        pointer-events: none;
+        .ie & {
+            pointer-events: all;
+        }
         top: -$top_contact;
         @include breakpoint(mediums) {
             top: -($top_contact + 100);
@@ -34,6 +38,7 @@
     }
     &-wr {
         position: relative;
+        pointer-events: all;
     }
     &-wr-l {
         padding-right: 100px;
@@ -68,6 +73,7 @@
     &-head {
         font-family: $font_normal;
         font-size: $font_size_h3;
+        color: #ffffff;
         @include breakpoint(mediums) {
             font-size: $font_size_p;
         }

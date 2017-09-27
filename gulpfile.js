@@ -16,24 +16,33 @@ var gulp = require('gulp'),
 
 gulp.task('sass', function () {
 	gulp.src('app/sass/app.scss')
-		.pipe(sourcemaps.init({ loadMaps: true }))
+		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions']
 		}))
+		.pipe(cleanCSS())
+		.pipe(rename('app.min.css'))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('app/css/'))
+		.pipe(gulp.dest('dist/css/'))
 		.pipe(browserSync.stream());
 });
 
-gulp.task('cleanCSS', function () {
+/* gulp.task('cleanCSS', function () {
 	gulp.src('app/css/app.css')
-		.pipe(sourcemaps.init({ loadMaps: true }))
+		.pipe(sourcemaps.init())
 		.pipe(cleanCSS())
 		.pipe(rename('app.min.css'))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('dist/css'));
-});
+}); */
+
+
+
+
+
+
+
 
 
 
@@ -86,7 +95,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('watch', function () {
-	gulp.watch(['app/sass/**/*.scss', 'app/css/*.css'], ['sass', 'cleanCSS']);
+	gulp.watch(['app/sass/**/*.scss', 'app/css/*.css'], ['sass']);
 	gulp.watch('app/js/*js', ['manage']);
 	gulp.watch('app/fonts/*', ['fonts']);
 	gulp.watch('app/images/**/*.*', ['images', 'sprite']);
@@ -94,4 +103,4 @@ gulp.task('watch', function () {
 	gulp.watch("dist/**/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['sass', 'manage', 'fonts', 'images', 'import', 'cleanCSS', 'browser-sync', 'sprite', 'watch']);
+gulp.task('default', ['sass', 'manage', 'fonts', 'images', 'import', 'browser-sync', 'sprite', 'watch']);

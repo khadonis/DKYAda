@@ -26,16 +26,17 @@
         transition: all ease .3s;
         z-index: 2;
         &:after {
-            content: "\f067";
+            content: "\+";
             position: absolute;
             left: 50%;
             top: 50%;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            font-family: 'FontAwesome';
-            font-size: 48px;
+            font-family: $font_bold;
+            font-size: 120px;
             color: #fff;
             opacity: 0;
+            @extend %transition;
         }
         p{
             padding: 10px;
