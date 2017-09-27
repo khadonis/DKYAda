@@ -16,6 +16,10 @@
         width: 100%;
         display: block;
         min-height: 100%;
+        .ios & {
+            height: auto;
+            min-height: fit-content;
+        }
     }
 }
 

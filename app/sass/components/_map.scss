@@ -1,10 +1,13 @@
+#map{
+    background-color: lighten($gray_dark, 50%);
+}
 .map {
     min-height: 85vh;
     margin-bottom: 80px;
     @include breakpoint(smalls) {
         margin-bottom: 0;
     }
-    width: 100%;
+    //width: 100%;
     //margin-top: 120px;
 }
 
@@ -101,5 +104,66 @@
     &:hover {
         opacity: 1;
         background-color: $brand_color;
+    }
+}
+.har-projs {
+    font-family: 'flexoregular';
+    ul {
+        list-style: none;
+    }
+    .dprojs {
+        float: right;
+        li {
+            cursor: pointer;
+            transition: ease-out .5s all;
+            &.active {
+                color: #fff;
+                background-color: #ddd;
+                background: linear-gradient(to right, rgba(240, 183, 161, 0.50) 0%, rgba(229, 99, 18, 1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26f0b7a1', endColorstr='#e56312', GradientType=1);
+            }
+            text-align: right;
+            transition: all ease-out .2sn;
+            cursor:pointer;
+            float: right;
+            clear:both;
+            margin-right:-15px;
+            padding:0 15px;
+        }
+    }
+    .dplaces {
+        font-family: 'flexothin';
+        padding-left: 0;
+        float: left;
+        li {
+            cursor: pointer;
+            display: block;
+            text-transform: capitalize;
+            font-size: 20px;
+            &:hover,
+            &.active {
+                .circle {
+                    background-color: $brand_color;
+                }
+            }
+            .circle {
+                display: list-item;
+                float: left;
+                clear: left;
+                margin-right: 10px;
+                margin-top: 6px;
+                background-color: $gray_dark;
+                width: 16px;
+                height: 16px;
+                border-radius: 20px;
+                transition: ease-out .5s all;
+                 :hover,
+                &.active {
+                    background-color: $brand_color;
+                }
+            }
+            color:$gray_dark;
+        }
+        //padding-top: 40px;
     }
 }

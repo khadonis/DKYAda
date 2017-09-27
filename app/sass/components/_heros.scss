@@ -1,7 +1,7 @@
 .hero-wr {
     clip-path: polygon(100% 0%, 100% 86%, 63% 100%, 0 86%, 0 0);
     position: relative;
-    top: 0;
+    top: $header_height;
     @include breakpoint(smalls) {
         body & {
             top: ($header_height) - 20;

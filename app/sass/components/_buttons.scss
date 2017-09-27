@@ -156,22 +156,33 @@
 
 .modal-form-link {
     position: fixed;
-    bottom: 0;
-    border-top-left-radius: 15px;
-    right: 0;
-    padding: 15px 30px;
+    transform: rotate(-90deg);
+    transform-origin: 0;
+    //bottom: 0;
+    top: 50%;
+    left: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    right: -152px;
+    padding: 7px 15px;
     cursor: pointer;
     display: inline-block;
     background-color: $brand_color;
     color: #ffffff;
-    min-height: 40px;
+    min-height: 25px;
     text-align: right;
     z-index: $zindex_header;
+    @extend %transition;
+    &:hover {
+        right: -147px;
+    }
     span,
     i {
         float: left;
     }
     span {
-        padding-left: 10px;
+        padding-left: 5px;
+        padding-top: 5px;
+        font-size: 18px;
     }
 }

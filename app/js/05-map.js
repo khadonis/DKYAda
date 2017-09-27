@@ -105,15 +105,15 @@ $.getJSON('js/ada.json', function (data) {
                     kartalMap.fitBounds(bounds);
                 });
             });
-
-            ul.find('li').removeClass('active');
-            $(this).addClass('active');
-            // clearMarkers();
-            runMap(obj, kartalMap);
-            kartalMap.setZoom(11);
-            // kartalMap.panTo(latLng);
-            kartalMap.fitBounds(boundss);
-
+            tumu.click(function () {
+                ul.find('li').removeClass('active');
+                $(this).addClass('active');
+                // clearMarkers();
+                runMap(obj, kartalMap);
+                kartalMap.setZoom(11);
+                // kartalMap.panTo(latLng);
+                kartalMap.fitBounds(boundss);
+            });
 
         });
     };
@@ -123,7 +123,7 @@ $.getJSON('js/ada.json', function (data) {
     $(document).click(function (evt) {
         kartalMap.set('scrollwheel', false);
     });
-    $("#kartalMap").click(function (evt) {
+    $("#harita").click(function (evt) {
         evt.stopPropagation();
         kartalMap.set('scrollwheel', true);
     });

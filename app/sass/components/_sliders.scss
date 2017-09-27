@@ -1,16 +1,17 @@
 .carousel-control {
     top: auto;
-    bottom: -60px;
+    bottom: -30px;
     @include breakpoint(mediums) {
         body & {
-           bottom: 0;
+            bottom: 0;
         }
     }
     @include breakpoint(smalls) {
         body & {
-           bottom: -50px;
-           height: 50px;
-           padding: 30px;
+            top: 0;
+            height: 50px;
+            padding: 30px;
+            display: none;
         }
     }
     height: 60px;
@@ -20,36 +21,64 @@
     &.left {
         background-color: rgba(#000, 0.9);
         color: #fff;
-        span{
+        span {
             top: 25px;
         }
     }
-    &.left {
-        left: -15%;
+    &.right {
+        right: 5%;
+        left: auto;
         @include breakpoint(huges) {
             body & {
-                left: 0%;
-                
+                right: 0%;
             }
         }
     }
-    &.right {
-        left: -10%;
+    &.left {
+        right: 10%;
+        left: auto;
         @include breakpoint(huges) {
             body & {
-                left: 67px;
+                right: 67px;
             }
         }
         @include breakpoint(larges) {
             body & {
-                left: 60px;
+                right: 60px;
             }
         }
         @include breakpoint(smalls) {
             body & {
-                left: 60px;
+                right: 60px;
             }
         }
-            
+    }
+}
+
+.carousel-img {
+    height: $slider_height + 20;
+    max-height: $slider_height + 20;
+    padding: 30px;
+    @include breakpoint(larges) {
+        height: $slider_height;
+        max-height: $slider_height;
+    }
+    @include breakpoint(mediums) {
+        max-height: $slider_height - 20;
+    }
+    @include breakpoint(smalls) {
+        max-height: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.carousel-text {
+    padding: 30px;
+    @include breakpoint(smalls) {
+        padding-top: 0;
+        h2 {
+            margin-top: 0;
+        }
     }
 }
