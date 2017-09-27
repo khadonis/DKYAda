@@ -105,7 +105,8 @@ $.getJSON('js/ada.json', function (data) {
                     kartalMap.fitBounds(bounds);
                 });
             });
-            tumu.click(function () {
+
+            if ($(window).width() < 425) {
                 ul.find('li').removeClass('active');
                 $(this).addClass('active');
                 // clearMarkers();
@@ -113,7 +114,17 @@ $.getJSON('js/ada.json', function (data) {
                 kartalMap.setZoom(11);
                 // kartalMap.panTo(latLng);
                 kartalMap.fitBounds(boundss);
-            });
+            } else {
+                tumu.click(function () {
+                    ul.find('li').removeClass('active');
+                    $(this).addClass('active');
+                    // clearMarkers();
+                    runMap(obj, kartalMap);
+                    kartalMap.setZoom(11);
+                    // kartalMap.panTo(latLng);
+                    kartalMap.fitBounds(boundss);
+                });
+            }
 
         });
     };
