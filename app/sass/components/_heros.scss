@@ -16,7 +16,7 @@
         width: 100%;
         top: $header_height;
         background-size: cover;
-        background-image: url('../images/hero-shoot.jpg');
+        //background-image: url('../images/hero-shoot.jpg');
         background-color: transparent;
     }
     .hero-video {
@@ -27,6 +27,11 @@
     }
     .hero-img {
         width: 100%;
+        @include breakpoint(smalls) {
+            width: auto;
+            height: (100vw)/1.5;
+            
+        }
     }
     
 }
