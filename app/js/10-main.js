@@ -8,10 +8,35 @@
 if (navigator.appName == 'Microsoft Internet Explorer' || !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1)) {
   $('html').addClass('ie');
 }
+
+
+
+//********************************************************************************************************************** */
 //detect ios
+
+
+
+function iOSversion() {
+  if (/iP(hone|od|ad)/.test(navigator.platform)) {
+    var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+    //return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+    return v[1];
+  }
+}
+
+ver = iOSversion();
+//console.log(ver);
+
 if (/iP(hone|od|ad)/.test(navigator.platform)) {
   $('html').addClass('ios');
 }
+if (ver <= 10) {
+  $('#galeri').hide();
+  $('#iosGallery').removeClass('hidden');
+}
+
+
+//************************************************************************************************************************* */
 //masonry
 $(document).ready(function () {
   //$('#myModal').modal();
@@ -31,7 +56,7 @@ $('body').on('load', function () {
   content.html('<img src="' + src + '">');
   $('.modal-profile').modal('{show:true}');
 }); */
-$('.modal-form-link, .btn-bilgi').click(function (e) {
+$('.modal-form-link, #detayliBilgi').click(function (e) {
   e.preventDefault();
   $('#myModal').modal('show');
 });
@@ -138,7 +163,7 @@ $('.button-group').each(function (i, buttonGroup) {
 //touch codes
 $(function () {
   $("#fancybox-wrap").swipe({
-    allowPageScroll:"auto",
+    allowPageScroll: "auto",
     //Generic swipe handler for all directions
     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
       //console.log("You swiped " + direction );  
@@ -154,7 +179,7 @@ $(function () {
 $(function () {
   var slide = $("#carousel-example-generic");
   slide.swipe({
-    allowPageScroll:"auto",
+    allowPageScroll: "auto",
     //Generic swipe handler for all directions
     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
       //console.log("You swiped " + direction );  
@@ -166,4 +191,16 @@ $(function () {
     },
     threshold: 10
   });
+});
+//************************************************************* */
+//goToDirection
+$('.direction-link').hover(function () {
+  $(this).append('<span class="hover-text">Yol Tarifi</span>');
+}, function () {
+  $(this).find('span.hover-text').remove();
+});
+$('.tel-number-icon').hover(function () {
+  $('#telIconWr').append('<span class="hover-text">444 9 359</span>');
+}, function () {
+  $('#telIconWr').find('span.hover-text').remove();
 });

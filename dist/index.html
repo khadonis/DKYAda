@@ -22,8 +22,8 @@
     <div class="top">
         <span class="hamb-menu">
             <span class="hamb-menu-line"></span>
-            <span class="hamb-menu-line"></span>
-            <span class="hamb-menu-line"></span>
+        <span class="hamb-menu-line"></span>
+        <span class="hamb-menu-line"></span>
         </span>
         <ul class="main-menu">
             <!-- <li class="main-menu-item"><a href="hakkimizda">Hakkımızda</a></li> -->
@@ -40,17 +40,17 @@
             <a href="index.html"><img class="logo" src="images/ada_yatay_logo.png" alt="DKY Ada Logo"></a>
         </div>
         <ul class="support-menu">
-            <!-- <li><a href="#"><i class="chat"></i></a></li> -->
-            <li><a href="https://www.google.com.tr/maps/dir//40.905370,29.185677" target="_blank">Yol Tarifi</a></li>
-            <li class="tel-number"><a href="tel:4449359">444 9 359</a></li>
-            <!--  <li><a href="#"><i class="ucyuzalmis"></i></a></li>
-            <li class="lang"><a href="#">TR</a>
-                <ul>
-                    <li><a href="#">EN</a> </li>
-                    <li><a href="#">AR</a> </li>
-                </ul>
+            <li>
+                <a class="direction-link" href="https://www.google.com.tr/maps/dir//40.905370,29.185677" target="_blank">
+                    <span class="icon-top-direction"></span>
+            </a>
             </li>
-            <li><a href="#"><i class="zoom"></i></a></li> -->
+            <li class="tel-number">
+                <a id="telIconWr" href="tel:4449359">
+                    <span class="tel-number-icon visible-xs"><i class="icon-phone"></i></span>
+                    <span class="hidden-xs">444 9 359</span>
+                </a>
+            </li>
         </ul>
     </div>
 </header>
@@ -60,7 +60,9 @@
         </video>
         <img class="visible-xs hero-img" src="images/hero-shoot.jpg" alt="DKY Ada Kartal Hero Resim">
     </section>
-    <button id="videoAc" class="btn-default btn-zindex visible-xs">Tanıtım Videomuz</button>
+    <button id="videoAc" class="btn-bilgi btn-zindex visible-xs">
+        <span>Videomuz</span>
+    </button>
     <section id="hakkimizda" class="info no-pad">
         <div class="container-fluid no-pad">
             <div class="col-sm-6">
@@ -72,9 +74,12 @@
                     <p>
                         2+1’den 3+1,5’e kadar değişen yaşam seçenekleri ile Ada hayatına kavuşmak için sizleri satış ofisimizde bekliyoruz.
                     </p>
-                    <a href="#" class="btn-bilgi">
+                    <a id="detayliBilgi" href="#" class="btn-bilgi">
                         <span>Detaylı bilgi</span>
                         <span class="icon-long-right"></span>
+                    </a>
+                    <a id="iosGallery" href="images/renders/_Akşam-Ada-Revize-JPG.jpg" rel="gl" class="thumb btn-bilgi hidden">
+                        <span>Galeri</span>
                     </a>
                 </div>
             </div>

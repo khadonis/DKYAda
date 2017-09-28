@@ -8,7 +8,7 @@ function validFunc(submitId, nameId, surnameId, telId, mailId, selectId, message
         var email = $(mailId).val();
         var projects = $(selectId).val();
         var message = $(messageId).val();
-        var nameReg = /^[A-Za-z]+$/;
+        var nameReg = /^[A-Za-zşŞıİçÇöÖüÜĞğ]+$/;
         var numberReg = /^[0-9]+$/;
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         var kabul = $(accId);
@@ -44,7 +44,7 @@ function validFunc(submitId, nameId, surnameId, telId, mailId, selectId, message
         } else if (!nameReg.test(surname)) {
             swal({
                 title: 'Uyarı!',
-                text: 'Lütfen geçerli bir ad giriniz',
+                text: 'Lütfen geçerli bir soyad giriniz',
                 type: 'warning',
                 confirmButtonText: 'OK'
             });

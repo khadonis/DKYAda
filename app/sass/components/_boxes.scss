@@ -4,14 +4,15 @@
     }
     z-index: 0;
     clip-path: polygon(100% 0, 100% 100%, 17% 94%, 0 100%, 0 0);
-    top: $top_sections;
+    top: $top_sections / 2;
     height: 100vh;
     position: relative;
     @include breakpoint(huges) {
-        height: 110vh;
+        height: 125vh;
+        top: -10px;
     }
     @include breakpoint(mediums) {
-        height: 70vh;
+        height: 85vh;
     }
     @include breakpoint(smalls) {
         height: 120vh;
@@ -245,7 +246,7 @@
         @include breakpoint(smalls) {
             width: 110px;
             height: 110px;
-        }            
+        }
     }
     .container {
         margin-bottom: 60px;

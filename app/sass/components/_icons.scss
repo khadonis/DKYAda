@@ -10,3 +10,12 @@ i {
         height: 32px;
     }
 }
+
+.icon-top-direction {
+    display: inline-block;
+    a:hover & {
+        @extend .icon-top-direction-h;
+    }
+}
+
+

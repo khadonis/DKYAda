@@ -3,6 +3,9 @@ $.getJSON('js/ada.json', function (data) {
     // json için local değişkenler
     var latLng = { lat: 40.9054637, lng: 29.1845827 };
     var kartalMapOpt = {
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_CENTER
+        },
         zoom: 11,
         scrollwheel: false,
         center: new google.maps.LatLng(data.proje[0][0]["lat"], data.proje[0][0]["lng"]),

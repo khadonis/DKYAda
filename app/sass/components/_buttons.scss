@@ -45,8 +45,12 @@
     }
 }
 
+button {
+    background: none;
+    width: auto;
+}
+
 .btn {
-   
     &-default {
         background-color: transparent;
         border: 5px solid $gray_darker;
@@ -68,8 +72,7 @@
     &-zindex {
         position: relative;
         z-index: $zindex_video_btn;
-        top: 90px;
-        font-size: 12px;
+        top: 90px; //font-size: 12px;
         padding: 5px 10px;
         width: 80%;
         margin: 0 auto;
@@ -80,6 +83,9 @@
         padding: 30px 65px;
         border: 5px solid $gray_darker;
         margin-top: 120px;
+        &.btn-zindex{
+            width: 80%;
+        }
         @include breakpoint(huges) {
             margin-top: 30px;
         }
@@ -157,8 +163,7 @@
 .modal-form-link {
     position: fixed;
     transform: rotate(-90deg);
-    transform-origin: 0;
-    //bottom: 0;
+    transform-origin: 0; //bottom: 0;
     top: 50%;
     left: auto;
     border-top-left-radius: 8px;
