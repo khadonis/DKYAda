@@ -8,6 +8,11 @@
             height: (100vw)/1.5;
         }
     }
+    @include breakpoint(mediums) {
+        body & {
+            height: 66.125vw;
+        }
+    }
     z-index: $zindex_heros;
     left: 0;
     &,
